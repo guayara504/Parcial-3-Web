@@ -6,7 +6,30 @@
 </head>
 <body>
   <h1>Registro de Estudiantes</h1>
-  <!-- Aquí debes agregar el formulario de registro de estudiantes -->
+  <form method="POST" action="{{ url_for('registrar_estudiante') }}">
+    <label for="num_lista">Número de Lista:</label>
+    <input type="number" id="num_lista" name="num_lista" required><br>
+
+    <label for="nombres">Nombres:</label>
+    <input type="text" id="nombres" name="nombres" required><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required><br>
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select><br>
+
+    <label for="id_grado">ID Grado:</label>
+    <input type="number" id="id_grado" name="id_grado" required><br>
+
+    <label for="id_seccion">ID Sección:</label>
+    <input type="number" id="id_seccion" name="id_seccion" required><br>
+
+    <button type="submit">Registrar</button>
+  </form>
 </body>
 </html>
 
